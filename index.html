@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Яхт-тур на Мальдивы</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/be2a428366.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <img src="img/logo2.png" alt="Логотип">
+  </div>
+  <div class="nav-wrapper">
+    <nav>
+      <ul class="menu">
+        <li><a href="#main">Главная</a></li>
+        <li><a href="#program">Программа</a></li>
+        <li><a href="#dates">Даты и стоимость</a></li>
+        <li><a href="#yacht">Ваша яхта</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <div class="main-content">
+      <h1 class="title-big">Путешествие по сказочным Мальдивам</h1>
+      <p class="title-small">Недельный океанский круиз по песчаным островам и коралловым лагунам среди подводных обитателей на супер-яхте</p>
+      <button class="main-btn" onclick="openModal()">Хочу на Мальдивы</button>
+    </div>
+  </main>
+
+  <section id="program" class="program">
+  <h2>Программа тура</h2>
+  <div class="program-grid">
+    <div class="program-item">
+      <img src="img/program1.jpg" alt="День 1">
+      <p><strong>День 1:</strong> Прибытие на Мальдивы, трансфер на яхту, приветственный ужин.</p>
+    </div>
+    <div class="program-item">
+      <img src="img/program2.jpg" alt="День 2">
+      <p><strong>День 2:</strong> Посещение острова Маафуши, сноркелинг и пляжный отдых.</p>
+    </div>
+    <div class="program-item">
+      <img src="img/program3.jpg" alt="День 3">
+      <p><strong>День 3:</strong> Дайвинг у рифа Фиш Хед, вечерняя рыбалка.</p>
+    </div>
+    <div class="program-item">
+      <img src="img/program4.jpg" alt="День 4">
+      <p><strong>День 4:</strong> Экскурсия на необитаемый остров, барбекю на пляже.</p>
+    </div>
+    <div class="program-item">
+      <img src="img/program5.jpg" alt="День 5">
+      <p><strong>День 5:</strong> Посещение местной деревни, знакомство с культурой.</p>
+    </div>
+    <div class="program-item">
+      <img src="img/program6.jpg" alt="День 6">
+      <p><strong>День 6:</strong> Свободное время для отдыха и водных развлечений.</p>
+    </div>
+    <div class="program-item center">
+      <img src="img/program7.jpg" alt="День 7">
+      <p><strong>День 7:</strong> Возвращение в порт, прощальный завтрак, трансфер в аэропорт.</p>
+    </div>
+  </div>
+</section>
+
+ <section id="dates" class="dates-section">
+  <div class="dates-overlay">
+    <div class="dates-content">
+      <h2>Даты и стоимость</h2>
+      <p><strong>Ближайшие даты:</strong></p>
+      <ul>
+        <li>10 – 17 июля 2025</li>
+        <li>24 – 31 июля 2025</li>
+        <li>7 – 14 августа 2025</li>
+      </ul>
+      <p><strong>Стоимость:</strong> от 100 000 ₽ с человека</p>
+      <button class="main-btn" onclick="openModal()">Забронировать</button>
+    </div>
+  </div>
+</section>
+
+  <section id="yacht" class="yacht">
+    <h2>Ваша яхта</h2>
+    <ul>
+      <li>
+        <img src="img/yacht1.jpg" alt="Каюты">
+        <p><strong>Каюты:</strong> 12 просторных двух- и трёхместных кают с кондиционером и санузлом.</p>
+      </li>
+      <li>
+        <img src="img/yacht2.jpg" alt="Лаунж-зона">
+        <p><strong>Лаунж-зона:</strong> Роскошная лаунж-зона, ресторан и бар для вашего комфорта.</p>
+      </li>
+      <li>
+        <img src="img/yacht3.jpg" alt="Джакузи">
+        <p><strong>Джакузи:</strong> Джакузи и солярий на борту для полного расслабления.</p>
+      </li>
+      <li>
+        <img src="img/yacht4.jpg" alt="Развлечения">
+        <p><strong>Развлечения:</strong> Водные развлечения, дайвинг, сапы, сноркелинг и многое другое.</p>
+      </li>
+      <li>
+        <img src="img/yacht5.jpg" alt="Команда">
+        <p><strong>Команда:</strong> Услуги профессиональной команды и шеф-повара на борту.</p>
+      </li>
+      <li>
+        <img src="img/yacht6.jpg" alt="Дополнительно">
+        <p><strong>Дополнительно:</strong> WiFi (платно), стерео-система, телевизор с возможностью подключения флешки.</p>
+      </li>
+    </ul>
+  </section>
+  <footer id="contacts">
+    <h2>Контакты</h2>
+    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+    <p><i class="fas fa-envelope"></i> info@yachtmaldives.ru</p>
+    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, д. 1</p>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Оставьте заявку</h3>
+      <p>Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
+      <input type="text" placeholder="Ваше имя">
+      <input type="tel" placeholder="Номер телефона">
+      <input type="email" placeholder="Email">
+      <button class="main-btn">Отправить</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+    // Закрытие модального окна при клике вне его
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

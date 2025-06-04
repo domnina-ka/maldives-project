@@ -1,0 +1,465 @@
+/* Общие настройки */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Навигация */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center; /* Центрируем */
+  font-weight: 700; /* Жирнее */
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu li a:hover {
+  color: #ffeb3b;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffeb3b;
+  transition: width 0.3s;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* Главная секция */
+main {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  background: url('../img/maldives-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.title-big {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.title-small {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка */
+.main-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.6);
+}
+
+/* Общий стиль секций */
+section {
+  padding: 5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+/* Заголовки */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Программа */
+.program ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.program li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.program li:hover {
+  transform: scale(1.02);
+}
+
+/* Даты и цена */
+.prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-item {
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Яхта */
+.yacht p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Модальное окно */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  color: #333;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background: linear-gradient(135deg, #00bcd4, #2196f3);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-content button:hover {
+  background: #007acc;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Футер */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .title-big {
+    font-size: 2rem;
+  }
+}
+
+.logo img {
+  max-height: 60px;
+  height: auto;
+}
+
+main {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  background: url('../img/maldives-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Новый контейнер — меню будет по центру */
+.nav-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.program-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.program-item:hover {
+  transform: scale(1.02);
+}
+
+.program-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.program-item p {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.program-item.center {
+  grid-column: 2 / span 1;
+}
+
+.dates-section {
+  position: relative;
+  background: url('../img/dates-bg.jpg') center/cover no-repeat;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.dates-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dates-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dates-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.dates-content li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.dates-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 2.5rem;
+  border-radius: 25px;
+  max-width: 500px;
+  width: 90%;
+  color: #333;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  animation: modalShow 0.5s ease-out;
+}
+
+@keyframes modalShow {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0072ff;
+  text-align: center;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #555;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #0072ff;
+  box-shadow: 0 0 8px rgba(0, 114, 255, 0.3);
+}
+
+.modal-content button {
+  background: linear-gradient(135deg, #00bcd4, #2196f3);
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-content button:hover {
+  background: #007acc;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #000;
+}
