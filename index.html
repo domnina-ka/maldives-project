@@ -21,6 +21,7 @@
         <li><a href="#program">Программа</a></li>
         <li><a href="#dates">Даты и стоимость</a></li>
         <li><a href="#yacht">Ваша яхта</a></li>
+        <li><a href="#guides">Наши гиды</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
@@ -28,7 +29,7 @@
 </header>
 
   <main id="main">
-    <div class="main-content">
+    <div class="main-content glass-bg">
       <h1 class="title-big">Путешествие по сказочным Мальдивам</h1>
       <p class="title-small">Недельный океанский круиз по песчаным островам и коралловым лагунам среди подводных обитателей на супер-яхте</p>
       <button class="main-btn" onclick="openModal()">Хочу на Мальдивы</button>
@@ -85,35 +86,58 @@
   </div>
 </section>
 
-  <section id="yacht" class="yacht">
-    <h2>Ваша яхта</h2>
-    <ul>
-      <li>
-        <img src="img/yacht1.jpg" alt="Каюты">
-        <p><strong>Каюты:</strong> 12 просторных двух- и трёхместных кают с кондиционером и санузлом.</p>
-      </li>
-      <li>
-        <img src="img/yacht2.jpg" alt="Лаунж-зона">
-        <p><strong>Лаунж-зона:</strong> Роскошная лаунж-зона, ресторан и бар для вашего комфорта.</p>
-      </li>
-      <li>
-        <img src="img/yacht3.jpg" alt="Джакузи">
-        <p><strong>Джакузи:</strong> Джакузи и солярий на борту для полного расслабления.</p>
-      </li>
-      <li>
-        <img src="img/yacht4.jpg" alt="Развлечения">
-        <p><strong>Развлечения:</strong> Водные развлечения, дайвинг, сапы, сноркелинг и многое другое.</p>
-      </li>
-      <li>
-        <img src="img/yacht5.jpg" alt="Команда">
-        <p><strong>Команда:</strong> Услуги профессиональной команды и шеф-повара на борту.</p>
-      </li>
-      <li>
-        <img src="img/yacht6.jpg" alt="Дополнительно">
-        <p><strong>Дополнительно:</strong> WiFi (платно), стерео-система, телевизор с возможностью подключения флешки.</p>
-      </li>
-    </ul>
-  </section>
+  <section id="yacht" class="yacht-section">
+  <div class="container">
+    <h2 class="section-title">Ваша яхта</h2>
+    <div class="yacht-gallery">
+      <div class="yacht-card">
+        <img src="images/yacht1.jpg" alt="Роскошный салон" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+1';">
+        <div class="card-title">Роскошный салон</div>
+      </div>
+      <div class="yacht-card">
+        <img src="images/yacht2.jpg" alt="Уютные каюты" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+2';">
+        <div class="card-title">Уютные каюты</div>
+      </div>
+      <div class="yacht-card">
+        <img src="images/yacht3.jpg" alt="Просторная палуба" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+3';">
+        <div class="card-title">Просторная палуба</div>
+      </div>
+      <div class="yacht-card">
+        <img src="images/yacht4.jpg" alt="Зона отдыха" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+4';">
+        <div class="card-title">Зона отдыха</div>
+      </div>
+      <div class="yacht-card">
+        <img src="images/yacht5.jpg" alt="Современная кухня" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+5';">
+        <div class="card-title">Современная кухня</div>
+      </div>
+      <div class="yacht-card">
+        <img src="images/yacht6.jpg" alt="Панорамный вид" onerror="this.src='https://via.placeholder.com/400x250?text=Фото+6';">
+        <div class="card-title">Панорамный вид</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="guides" class="guides">
+  <h2>В путешествии вас сопровождают</h2>
+  <div class="guides-grid">
+    <div class="guide-card">
+      <img src="img/guide1.jpg" alt="Гид Анна">
+      <h3>Анна Орлова</h3>
+      <p>Опытный шкипер и инструктор по дайвингу. Более 10 лет проводит яхт-туры по экзотическим странам. Обожает океан и делится своей страстью с гостями!</p>
+    </div>
+    <div class="guide-card">
+      <img src="img/guide2.jpg" alt="Гид Алексей">
+      <h3>Алексей Смирнов</h3>
+      <p>Профессиональный гид и организатор экспедиций. Расскажет о культуре Мальдив, научит сноркелингу и зарядит отличным настроением на весь тур!</p>
+    </div>
+    <div class="guide-card">
+      <img src="img/guide3.jpg" alt="Гид Лейла">
+      <h3>Лейла Хасан</h3>
+      <p>Местная жительница и знаток подводного мира. Покажет вам секретные уголки архипелага и расскажет удивительные истории островов.</p>
+    </div>
+  </div>
+</section>
   <footer id="contacts">
     <h2>Контакты</h2>
     <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
